@@ -1,0 +1,30 @@
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "vermelldata"
+version = "0.1.0"
+description = "PurpleAir data ingestion + live dashboard"
+authors = ["Your Name <email@example.com>"]
+packages = [{ include = "vermelldata" }]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+httpx = "^0.27"
+tenacity = "^8.2"
+pydantic-settings = "^2.2"
+duckdb = "^0.10"
+typer = { version = "^0.12", extras = ["all"] }
+dash = "^2.17"
+pandas = "^2.2"
+plotly = "^5.21"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.4"
+pytest = "^8.2"
+pytest-httpx = "^0.30"
+
+[tool.ruff]
+line-length = 100
+
